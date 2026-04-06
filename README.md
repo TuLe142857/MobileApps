@@ -1,1 +1,0 @@
-# Phát triển ứng dụng cho các thiết bị di động PTITHCM 
