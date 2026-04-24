@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void writeFC(String file, String content){
-        File cacheDir = getFilesDir();
+        File cacheDir = getCacheDir();
         try(FileOutputStream fos = new FileOutputStream(new File(cacheDir, file)))
         {
             fos.write(content.getBytes(StandardCharsets.UTF_8));
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private String readFC(String file){
-        File cacheDir = getFilesDir();
+        File cacheDir = getCacheDir();
         try(FileInputStream fin = new FileInputStream(new File(cacheDir, file)))
         {
             byte[] buffer = new byte[1024];

@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     WeatherAdapter weatherAdapter;
 
     private void GetData(String cityName) {
-        String url = "https://api.weatherapi.com/v1/forecast.json?key=b26ad635f646454184392417260404&q=" + cityName + "&days=1&aqi=no&alerts=no";
-
+//        String url = "https://api.weatherapi.com/v1/forecast.json?key=b26ad635f646454184392417260404&q=" + cityName + "&days=1&aqi=no&alerts=no";
+        String url = "https://api.weatherapi.com/v1/forecast.json?key=25344afb84a647bf99611716263103&q=" + cityName + "&days=1&aqi=no&alerts=no";
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
         Log.d("BBB", url.toString());
         txtCityName.setText(cityName);
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-
+                Toast.makeText(MainActivity.this, "Co loi khi goi api :((", Toast.LENGTH_SHORT).show();
             }
         });
         requestQueue.add(jsonObjectRequest);
